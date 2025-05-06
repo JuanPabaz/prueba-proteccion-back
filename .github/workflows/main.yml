@@ -26,7 +26,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [restaurant-aws]
+    runs-on: [proteccion-runner]
     steps:
       - name: Pull image from docker hub
         run: docker pull juanpablo24/proteccion-aws-ec2:latest
