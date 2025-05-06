@@ -41,5 +41,5 @@ jobs:
             -e DATABASE_NAME=${{ secrets.DATABASE_NAME }} \
             -e DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }} \
             -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
-            juanpablo24/restaurant-aws-ec2:latest
+            juanpablo24/proteccion-aws-ec2:latest
       
