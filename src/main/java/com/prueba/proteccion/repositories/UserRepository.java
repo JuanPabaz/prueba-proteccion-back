@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
     Optional<User> findByUsername(String username);
-
+    //Try CI/CD
     @Query("SELECT u.role FROM User u WHERE u.username = :nombre")
     Role findRoleByUsername(String nombre);
 
