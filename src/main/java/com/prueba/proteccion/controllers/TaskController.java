@@ -2,7 +2,6 @@ package com.prueba.proteccion.controllers;
 
 import com.prueba.proteccion.dtos.TaskRequestDTO;
 import com.prueba.proteccion.dtos.TaskResponseDTO;
-import com.prueba.proteccion.enums.State;
 import com.prueba.proteccion.exceptions.ObjectNotFoundException;
 import com.prueba.proteccion.services.TaskService;
 import org.springframework.web.bind.annotation.*;
@@ -20,12 +19,8 @@ public class TaskController {
     }
 
     @GetMapping("/{idUser}")
-    public List<TaskResponseDTO> findAllByUser(
-            @PathVariable Long idUser,
-            @RequestParam(required = false) State state,
-            @RequestParam(required = false) String title
-    ) {
-        return taskService.findAllByUser(idUser, state, title);
+    public List<TaskResponseDTO> findAllByUser(@PathVariable Long idUser) {
+        return taskService.findAllByUser(idUser);
     }
 
     @PostMapping

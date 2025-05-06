@@ -30,8 +30,8 @@ public class TaskService {
         this.userRepository = userRepository;
     }
 
-    public List<TaskResponseDTO> findAllByUser(Long idUser, State state, String title) {
-        return taskMapper.mapTaskList(taskRepository.findAllByUserWithFilters(idUser,state,title));
+    public List<TaskResponseDTO> findAllByUser(Long idUser) {
+        return taskMapper.mapTaskList(taskRepository.findAllByUser(idUser));
     }
 
     public TaskResponseDTO createTask(TaskRequestDTO taskRequestDTO) throws ObjectNotFoundException {
